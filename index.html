@@ -11,9 +11,21 @@
 </head>
 <body>
     <div id="app">
-        <h1> {{ welcomeMessage }} </h1>
-        <p>Con Método: {{ a }} x {{ b }} = {{ calculatorMethod() }}</p>
-        <p>Con Computed: {{ a }} x {{ b }} = {{ calculatorComputed }}</p>
+        <div class="first-div">
+            <h1>{{ welcomeMessage }}</h1>
+            <p>Con Método: {{ a }} x {{ b }} = {{ calculatorMethod() }}</p>
+            <p>Con Computed: {{ a }} x {{ b }} = {{ calculatorComputed }}</p>
+            <button v-on:click="calculatorDirective()">¡Hacé click!</button>
+        </div>
+        <div>
+            <p>Con v-text: <span v-text="subtitle"></span></p>
+            <p>Con v-html: <span v-html="subtitle"></span></p>    
+        </div>
+        <div>
+            <img v-bind:src="photo" v-bind:alt="altText">
+            <input type="text" v-model="defaultText">
+            <p> {{ defaultText }} </p>
+        </div>
     </div>
 </body>
 </html>
