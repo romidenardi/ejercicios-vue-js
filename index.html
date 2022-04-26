@@ -4,10 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vue Js</title>
+    <title>Mi primer proyecto en Vue Js</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script defer src="./app.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    <h1>¡Hola, mundo!</h1>
+    <div id="app">
+        <h1> {{ welcomeMessage }} </h1>
+        <p>Con Método: {{ a }} x {{ b }} = {{ calculatorMethod() }}</p>
+        <p>Con Computed: {{ a }} x {{ b }} = {{ calculatorComputed }}</p>
+    </div>
 </body>
 </html>
