@@ -22,10 +22,50 @@
             <p>Con v-html: <span v-html="subtitle"></span></p>    
         </div>
         <div>
-            <img v-bind:src="photo" v-bind:alt="altText">
+            <img v-bind:src="photo" v-bind:alt="altText" :style="{'width':'150px'}">
             <br>
             <input type="text" v-model="defaultText">
             <p> {{ defaultText }} </p>
+        </div>
+        <div>
+            <div class="conditional" v-if="showGreeting">
+                <h2>¡Hola, V-if!</h2> 
+            </div>
+            <div class="conditional" v-else>
+                <h2>¡Hola, V-else!</h2> 
+            </div>
+        </div>
+        <div>
+            <div class="conditional" v-if="showConditional == 1">
+                <h3>Soy el condicional if</h3>
+            </div>
+            <div class="conditional" v-else-if="showConditional == 2">
+                <h3>Soy el condicional else-if</h3>
+            </div> 
+            <div class="conditional" v-else="">
+                <h3>Soy el condicional else</h3>
+            </div> 
+        </div>
+        <div>
+            <div class="conditional" v-show="showGreeting">
+                <h2>¡Hola, V-show!</h2> 
+            </div>
+        </div>
+        <div class="conditional">
+            <button @click="changeButton()"> {{ buttonText }}</button>
+            <p v-if="showMessage">Soy el párrafo mágico</p>
+        </div>
+        <ul>
+            <li class="product" :class="classForTable(i)" v-for="(item,i) in products" :key="i">
+                <span> {{ item.id }} </span>
+                <span> {{ item.name }} </span>
+                <span>
+                    <img :src="item.productPhoto" :alt="name" :style="{'width':'25px'}">
+                </span>
+            </li>
+        </ul>
+        <div>
+            <p :class="ccsStyle">Renderizando estilos</p>
         </div>
     </div>
 </body>
