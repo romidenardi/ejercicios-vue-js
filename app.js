@@ -30,26 +30,6 @@ Vue.component ("product-gride", {
 var app = new Vue({
 
     el: "#app",
-    
-    // El template se puede poner acá o en el HTML (como tag)
-
-    template: `<div>
-            <my-component> </my-component>
-            </br>
-            <h1>A mano</h1>
-            <product-gride 
-                name="London" 
-                id="000" 
-                product-photo="./images/london.jpg"> 
-            </product-gride>
-            </br>
-            <h1>V For</h1>
-            <product-gride v-for="(item, i) in products" :key="i"
-                :name="item.name"
-                :id="item.id"
-                :product-photo="item.productPhoto" :alt="item.name">
-            </product-gride>
-        </div>`,
 
     data: {
         welcomeMessage: "¡Hola, Mundo!",

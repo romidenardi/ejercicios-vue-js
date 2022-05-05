@@ -12,11 +12,29 @@
 <body>
     <div id="app">
 
-        
+
 
 
 
         <!-- CLASES ANTERIORES
+
+        <div>
+            <my-component> </my-component>
+            </br>
+            <h1>A mano</h1>
+            <product-gride 
+                name="London" 
+                id="000" 
+                product-photo="./images/london.jpg"> 
+            </product-gride>
+            </br>
+            <h1>V For</h1>
+            <product-gride v-for="(item, i) in products" :key="i"
+                :name="item.name"
+                :id="item.id"
+                :product-photo="item.productPhoto" :alt="item.name">
+            </product-gride>
+        </div>
 
         <div class="first-div">
             <h1>{{ welcomeMessage }}</h1>
